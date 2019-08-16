@@ -8,10 +8,14 @@ import java.util.Date;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author jillU
  *
  */
+@ApiModel(description = "Model of User")
 public class User {
 	
 	private Integer id;
@@ -20,6 +24,7 @@ public class User {
 	private String name;
 	
 	@Past(message="Date of Birth should not be future date")
+	@ApiModelProperty("Date of Birth should not be future Date")
 	private Date dob;
 	/**
 	 * @param id
