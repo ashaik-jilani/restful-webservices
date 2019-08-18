@@ -3,13 +3,14 @@
  */
 package com.jilani.restservices.restfulwebservices.user.controller;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author jilani
  *
  */
-@JsonIgnoreProperties(value = {"field1", "field2"})
+@JsonFilter(value = "SomeBeanFilter")
 public class SomeBean {
 	
 	private String field1;
