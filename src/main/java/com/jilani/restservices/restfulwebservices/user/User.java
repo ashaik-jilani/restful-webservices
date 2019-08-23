@@ -32,6 +32,9 @@ public class User {
 	@Past(message="Date of Birth should not be future date")
 	@ApiModelProperty("Date of Birth should not be future Date")
 	private Date dob;
+	
+	
+	
 	/**
 	 * @param id
 	 * @param name
@@ -42,6 +45,13 @@ public class User {
 		this.id = id;
 		this.name = name;
 		this.dob = dob;
+	}
+	/**
+	 * 
+	 */
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * @return the id
