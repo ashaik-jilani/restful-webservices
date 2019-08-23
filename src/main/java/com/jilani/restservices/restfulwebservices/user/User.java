@@ -5,6 +5,9 @@ package com.jilani.restservices.restfulwebservices.user;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -15,9 +18,12 @@ import io.swagger.annotations.ApiModelProperty;
  * @author jillU
  *
  */
+@Entity
 @ApiModel(description = "Model of User")
 public class User {
 	
+	@Id
+	@GeneratedValue
 	private Integer id;
 	
 	@Size(min=2,message="Name should be more than 2 characters")
