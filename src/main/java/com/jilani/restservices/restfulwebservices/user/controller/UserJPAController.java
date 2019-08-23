@@ -26,7 +26,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.jilani.restservices.restfulwebservices.user.User;
 import com.jilani.restservices.restfulwebservices.user.UserRepository;
-import com.jilani.restservices.restfulwebservices.user.dao.UserDaoService;
 import com.jilani.restservices.restfulwebservices.user.exception.UserNotFoundException;
 
 /**
@@ -36,9 +35,6 @@ import com.jilani.restservices.restfulwebservices.user.exception.UserNotFoundExc
 @RestController
 public class UserJPAController {
 
-	@Autowired
-	UserDaoService usersDao;
-	
 	@Autowired
 	UserRepository userReposiotry;
 	
