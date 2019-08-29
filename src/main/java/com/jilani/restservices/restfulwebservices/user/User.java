@@ -4,10 +4,12 @@
 package com.jilani.restservices.restfulwebservices.user;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -32,6 +34,9 @@ public class User {
 	@Past(message="Date of Birth should not be future date")
 	@ApiModelProperty("Date of Birth should not be future Date")
 	private Date dob;
+	
+	@OneToMany(mappedBy = "user")
+	private List<Post> posts;
 	
 	
 	
@@ -89,6 +94,19 @@ public class User {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
+	/**
+	 * @return the posts
+	 */
+	public List<Post> getPosts() {
+		return posts;
+	}
+	/**
+	 * @param posts the posts to set
+	 */
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+	
 	
 
 }
